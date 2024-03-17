@@ -54,5 +54,16 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		security.checkTokenAccess("permitAll()");
 	}
 	
+	// USANDO PARA VERFICAR SE O TOKEN E VALIDO
+	@Override
+	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+		
+		//Usando o "isAuthenticated()" sou obrigado a passar o usuario e senha no
+		// cliente final.
+		security.checkTokenAccess("isAuthenticated()");
+		
+		//Usando o permitAll() não sou obrigado para passar Usuario e Senha.
+		security.checkTokenAccess("permitAll()");
+	}
 	
 }
