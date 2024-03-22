@@ -38,14 +38,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 	
 	//CRIADO PARA USAR O FLUXO "password"
-//	@Bean
-//	@Override
-//	protected AuthenticationManager authenticationManager() throws Exception {
-//		// TODO Auto-generated method stub
-//		return super.authenticationManager();
-//	}
-//	
+	@Bean
+	@Override
+	protected AuthenticationManager authenticationManager() throws Exception {
+		// TODO Auto-generated method stub
+		return super.authenticationManager();
+	}
 	
+	 
 	
 //	@Override
 //	protected void configure(HttpSecurity http) throws Exception {
