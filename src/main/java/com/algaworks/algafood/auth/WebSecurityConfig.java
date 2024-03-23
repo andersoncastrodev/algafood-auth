@@ -16,18 +16,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	// USUARIO EM MEMORIA TEM DE EXECUÇÃO
 	// NÃO TRAZENDO DO BANCO DE DADOS.
 	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		
-		auth.inMemoryAuthentication()
-		
-		.withUser("thiago")
-			.password(passwordEncoder().encode("123"))
-			.roles("ADMIN")
-		.and()
-		.withUser("joao")
-		.password(passwordEncoder().encode("123"))
-		.roles("ADMIN");
-	}
+//	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//		
+//		auth.inMemoryAuthentication()
+//		
+//		.withUser("thiago")
+//			.password(passwordEncoder().encode("123"))
+//			.roles("ADMIN")
+//		.and()
+//		.withUser("joao")
+//		.password(passwordEncoder().encode("123"))
+//		.roles("ADMIN");
+//	}
 	
 	
 	// GERADOR DE SENHA FORTE
