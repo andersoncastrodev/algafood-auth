@@ -47,6 +47,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				.authorizedGrantTypes("authorization_code")
 				.scopes("write","read")	
 				.redirectUris("http://aplicacao-cliente") // ADICIONANDO URI QUE VÃO SER PERMITIDAS
+				
+			.and()
+			.withClient("webadmin")
+			.authorizedGrantTypes("implicit")
+			.redirectUris("http://aplicacao-cliente")
 			
 			.and()
 			
