@@ -72,11 +72,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 
-//		endpoints
-//		.authenticationManager(authenticationManager)
-//		
-//		.userDetailsService(detailsService)
-//		
+		endpoints
+		.authenticationManager(authenticationManager)
+		
+		.userDetailsService(detailsService)
+		
 		.reuseRefreshTokens(false); // NÃO ULTILIZAR O MESMO REFRESH TOKEN
 	}
 	
