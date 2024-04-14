@@ -15,20 +15,20 @@ public class CorsConfig {
 
 	@Bean
 	public FilterRegistrationBean<CorsFilter> corsFilter() {
-//		CorsConfiguration config = new CorsConfiguration();
-//		config.setAllowCredentials(false);
-//		config.setAllowedOrigins(Collections.singletonList("*"));
-//		config.setAllowedMethods(Collections.singletonList("*"));
-//		config.setAllowedHeaders(Collections.singletonList("*"));
-//		
-//		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//		source.registerCorsConfiguration("/oauth/token", config);
-//
-//		FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>();
-//		bean.setFilter(new CorsFilter(source));
-//		bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
-//		
-//		return bean;
+		CorsConfiguration config = new CorsConfiguration();
+		config.setAllowCredentials(false);
+		config.setAllowedOrigins(Collections.singletonList("*"));
+		config.setAllowedMethods(Collections.singletonList("*"));
+		config.setAllowedHeaders(Collections.singletonList("*"));
+		
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		source.registerCorsConfiguration("/oauth/token", config);
+
+		FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>();
+		bean.setFilter(new CorsFilter(source));
+		bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
+		
+		return bean;
 	}
 
 }
